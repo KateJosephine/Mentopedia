@@ -19,7 +19,7 @@
     <!-- Header Section -->
     <header class = "header">
 
-        <section class = "flex">
+        <div class = "flex">
 
             <a href = "home.html" class = "logo">
                 <span style = "color:red">M</span>
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-        </section>
+        </div>
     </header>
 
     <!-- Side Bar Section -->
@@ -60,12 +60,6 @@
             <i class = "fas fa-times"></i> 
         </div>
 
-        <div class = "profile">
-            <img src = "Images/student1.jpg" alt="Student Image">
-            <p>Student</p>
-            <a href = "profile.html" class = "btn">View Profile</a>
-        </div>
-
         <nav class="navbar">
             <a href = "home.html"><i class = "fas fa-home"></i><span>Home</span></a>
             <a href = "about.html"><i class="fa-solid fa-circle-info"></i><span>About Us</span></a>
@@ -73,12 +67,31 @@
             <a href = "teachers.html"><i class="fas fa-chalkboard-teacher"></i><span>Teachers</span></a>
             <a href = "forum.html"><i class="fa fa-bullhorn"></i><span>Forum</span></a> 
         </nav>
+<!--    <nav class = "navbar">
+        <ul>
+            <a href="#" class = "side-logo">
+                <img src = "Images/Mentopedia Logo.png" alt = "Mentopedia Logo">
+                <span class = "nav-item">Mentopedia</span>
+            </a>
+
+            <li><a href = "home.html"><i class = "fas fa-home"></i>
+                <span class = "nav-item"> Home</span></a></li>
+            <li><a href = "about.html"><i class="fa-solid fa-circle-info"></i>
+                <span class = "nav-item">About Us</span></a></li>
+            <li><a href = "students.html"><i class="fa-solid fa-book-open-reader"></i>
+                <span class = "nav-item">Students</span></a></li>
+            <li><a href = "teachers.html"><i class="fas fa-chalkboard-teacher"></i>
+                <span class = "nav-item">Teachers</span></a></li>
+            <li><a href = "forum.html"><i class="fa fa-bullhorn"></i>
+                <span class = "nav-item">Forum</span></a></li>
+
+        </ul>
+    </nav> -->
 
     </div>
 
     <!--Quick Select Section-->
-
-    <section class = "quick-select">
+    <div class = "quick-select">
 
         <h1 class = "heading">Dashboard</h1>
 
@@ -95,7 +108,7 @@
             <div class="box1">
                 <div>
                     <h3>Learn With Us</h3>
-                    <p>Learn with us at Mentopedia, where we offer <br> personalized learning plans, qualified tutors, and a variety of resources to help you succeed. </p>
+                    <p>Learn with us at Mentopedia, where we offer <br> personalized learning plans, qualified tutors, <br> and a variety of resources to help you succeed. </p>
                     <a href="register.html" class="reg-btn">Enroll Now</a> 
                 </div>
             </div>
@@ -108,22 +121,50 @@
             <div class="box-container">
           
                 <div class="box">
-                   <h3 class="title">Services</h3>
-                   <p class="tutor">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, nam? 
-                               <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, nam?  
-                               <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, nam? </p>
-                </div>
-          
-                <div class="box">
-                   <h3 class="title">Contact</h3>
-                   <p class="tutor">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, nam? 
-                               <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, nam?
-                               <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, nam? </p>
-                </div>
-          
-          
-             </div>
-    </section>
+
+                    <h3 class="title">Services</h3>
+                    <p class="tutor">Mentopedia is a tutorial center that offers a variety of services to help students of all ages and abilities succeed in school. Mentopedia's tutors are<br> qualified and experienced in a variety of subjects, and they are passionate about helping students learn and achieve their academic goals. </p><br><br>
+                    <h4 class="title2">Services Offered</h4>   
+                    <div class = "flex">
+                        <a href="#"><i class="fa fa-language"></i><span>Language Skills <br>Development</span></a>
+                        <a href="#"><i class="fa fa-award"></i><span>Core Subject <br>Mastery</span></a>
+                        <a href="#"><i class="fa-solid fa-magnifying-glass-chart"></i><span>Exploring Additional <br>Subjects</span></a>
+                        <a href="#"><i class="fa-solid fa-handshake-angle"></i><span>Project <br>Assistance</span></a>
+                        <a href="#"><i class="fa-solid fa-file-circle-question"></i><span>Exam Review <br>Sessions</span></a>
+                        <a href="#"><i class="fa-solid fa-laptop-file"></i><span>Thesis <br>Consultation</span></a>
+                    </div>     
+                 </div>
+            </div>
+        </div>
+
+        <div class = "contactdetails">
+
+            <h2> Reach Us </h2>
+
+        <div class = "add-details">
+            <div class = "details1">
+            <img src = "Images/location.png">
+            <h3>Address</h3>
+            <p>M.H. Del Pilar St. Poblacion 1 Batangas City</p>
+            </div>
+            
+            <div class = "details1">
+            <img src = "Images/phone.png">
+            <h3>Phone Number</h3>
+            <p>0928 163 6898</p>
+            </div>
+
+            <div class = "details1">
+            <img src = "Images/email.png">
+            <h3>Email</h3>
+            <p>mentopediatutorialservices@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <div class ="map">
+        <img src ="Images/Mentopedia-location.jpg" alt = "Mentopedia's Location">
+    </div>
 
 
     <!-- Footer -->
