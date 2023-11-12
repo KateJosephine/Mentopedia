@@ -150,7 +150,7 @@ section {
 .header {
     background-color: var(--white);
     border-bottom: var(--border);
-    position: relative;
+    position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
 }
@@ -405,18 +405,6 @@ img {
     margin-top: 1.3rem;
     margin-left: 10rem
 }
-    /*margin-left: 20rem;
-    margin-right: 10rem;
-
-
-.quick-select .box-container .box .flex1 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    padding: 1.4rem;
-    margin-left: 7rem;
-    margin-right: 10rem;
-} */
 
 .quick-select .box-container .box .flex a {
     padding: 2rem 2.5rem 2.5rem 2rem;
@@ -711,7 +699,7 @@ img {
  
  .content {
     position: absolute;
-    top: 25%;
+    top: 35%;
     padding: 10px;
     text-align: center;
     height: 100%;
