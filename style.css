@@ -1,221 +1,1045 @@
-<!DOCTYPE html>
-<html lang = "en">
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Indie+Flower&display=swap');
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+:root {
+   --main-color:#f33925;
+   /*--red:#e74c3c;*/
+   --orange:#f39c12;
+   --light-color:#888;
+   --light-bg:#eee;
+   --black:#2c3e50;
+   --white:#fff;
+   --border:.1rem solid rgba(0,0,0,.2);
+}
 
-    <!-- font awasome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
 
-    <!-- css file link -->
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
+*::selection {
+   background-color: var(--main-color);
+   color: #fff; 
+}
 
-<body>
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
 
-    <!-- Header Section -->
-    <header class = "header">
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
 
-        <div class = "flex">
+*::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
 
-            <a href = "home.html" class = "logo">
-                <span style = "color:red">M</span>
-                <span style = "color:rgb(251, 206, 26)">E</span>
-                <span style = "color:rgb(244, 177, 7)">N</span>
-                <span style = "color:rgb(31, 144, 31)">T</span>
-                <span style = "color:rgb(123, 4, 170)">O</span>
-                <span style = "color:rgb(6, 118, 230)">P</span>
-                <span style = "color:red">E</span>
-                <span style = "color:rgb(251, 206, 26)">D</span>
-                <span style = "color:rgb(244, 177, 7)">I</span>
-                <span style = "color:rgb(31, 144, 31)">A</span></a>
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
 
-            <div class = "icons">
-                <div id = "menu-btn" class = "fas fa-bars"></div>
-                <div id = "user-btn" class = "fas fa-user"></div>
-                <div id = "toggle-btn" class = "fa-sharp fa-solid fa-moon"></div>
-            </div>
+body {
+    background-color: var(--white);
+    
+}
+
+body.dark {
+    --light-color:#aaa;
+    --light-bg:#333;
+    --black:#fff;
+    --white:#222;
+    --border:.1rem solid rgba(255,255,255,.2);
+}
+
+body.active {
+    padding-left: 0;
+}
+
+section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn,
+.option-btn,
+.delete-btn,
+.inline-btn,
+.reg-btn,
+.inline-option-btn,
+.inline-delete-btn {
+    border-radius: 5rem;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn,
+.option-btn,
+.delete-btn {
+    display: block;
+    width: 100%;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn {
+    display: inline-block;
+}
+
+.btn {
+    background-color: var(--main-color);
+}
+
+.inline-btn {
+    background-color: var(--main-color);
+}
+
+.reg-btn {
+    background-color: transparent;
+    border: solid;
+    display: inline-block;
+    margin: 3rem 0 0 18rem;
+}
 
 
-            <div class = "profile">
-                <img src = "Images/student1.jpg" alt="Student Image">
-                <p>Student</p>
-                <a href = "profile.html" class = "btn">View Profile</a>
-                <div class = "flex-btn">
-                    <a href = "login.html" class = "option-btn">Log Out</a>
-                    <!--<a href = "register.html" class = "option-btn">Logout</a>-->
-                </div>
-            </div>
+.option-btn,
+.inline-option-btn {
+    background-color: var(--orange);
+}
 
-        </div>
-    </header> 
+.delete-btn,
+.inline-delete-btn {
+    background-color: var(--red);
+}
 
-    <!-- Side Bar Section -->
-    <div class = "side-bar">
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover,
+.inline-btn:hover,
+.reg-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover {
+    background-color: rgb(233, 185, 185);
+    color: black;
+}
 
-        <div class = "close-side-bar">
-            <i class = "fas fa-times"></i> 
-        </div>
+.flex-btn {
+    display: flex;
+}
 
-    <!---   <div class = "profile">
-            <img src = "Images/student1.jpg" alt="Student Image">
-            <p>Student</p>
-            <a href = "profile.html" class = "btn">View Profile</a>
-        </div> -->
+.heading {
+    padding-bottom: 1.8rem;
+    font-size: 2.5rem;
+    color: var(--black);
+    text-transform: capitalize;
+    margin: 2.5rem 0 2rem 10rem;
+}
 
-        <nav class="navbar">
-            <a href = "home.html"><i class = "fas fa-home"></i><span>Home</span></a>
-            <a href = "about.html"><i class="fa-solid fa-circle-info"></i><span>About Us</span></a>
-            <a href = "students.html"><i class="fa-solid fa-book-open-reader"></i><span>Students</span></a>
-            <a href = "teachers.html"><i class="fas fa-chalkboard-teacher"></i><span>Teachers</span></a>
-            <a href = "forum.html"><i class="fa fa-bullhorn"></i><span>Forum</span></a> 
-        </nav>
 
-    </div>
+.header {
+    background-color: var(--white);
+    border-bottom: var(--border);
+    position: relative;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
 
-    <!--<section class = "about">-->
-    <div class = "about-header">
-        <img src = "Images/tutorialimg.jpg">
-        <div class = "content">
-            <h2>Why Choose Mentopedia?</h2>
-            <p>Your personalized learning partner, where we empower students to achieve their academic <br>goals in a fun and supportive environment. With our qualified and experienced tutors, a variety of resources, <br>and flexible scheduling options, we make learning easy and accessible for everyone</p>
-        </div>
-    </div>
+.header .flex {
+    padding: 1.5rem 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        <section class="about-box-container">
+.header .flex .logo {
+    font-size: 5rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-left: 2rem;
+}
 
-            <div class="box">
-                <i class="fa-solid fa-book-open-reader"></i>
-               <div>
-                  <h3>Variety of Courses</h3>
-                  <p>Mentopedia can teach a wide variety of courses to students of all ages and abilities. </p>
-               </div>
-            </div>
-      
-            <div class="box">
-               <i class="fa-solid fa-school-lock"></i>
-               <div>
-                  <h3>Safe Environment</h3>
-                  <p>Mentopedia offers students a fun, safe, and supportive environment to learn and grow. </p>
-               </div>
-            </div>
-      
-            <div class="box">
-               <i class="fas fa-chalkboard-user"></i>
-               <div>
-                  <h3>Professional Tutors</h3>
-                  <p>Our professional tutors are ready to help students achieve their academic goals</p>
-               </div>
-            </div>
-      
-        </section>
+.header .flex .icons div {
+    font-size: 2rem;
+    color: var(--black);
+    border-radius: .5rem;
+    height: 4.5rem;
+    cursor: pointer;
+    width: 4.5rem;
+    line-height: 4.4rem;
+    background-color: var(--light-bg);
+    text-align: center;
+    margin-left: .5rem;
+}
 
-   <!-- </section> -->
+.header .flex .icons div:hover {
+    background-color: var(--black);
+    color:var(--white)
+} 
 
-        <div class = "teacher-header">
-            <h2>Connect with Our Teachers</h2>
-        </div>
+.header .flex .profile{
+    position: absolute;
+    top:120%; right: 2rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+    width: 30rem;
+    transform: scale(0); 
+    transform-origin: top right;
+    transition: .2s linear;
+ }
 
-        <div class = "teacherscontact">
+.header .flex .profile.active {
+    transform: scale(1);
+}
 
-        <div class = "teacher1">
-            <img src = "Images/Teacher1.png" alt = "Teacher Arlene's Picture">
-            <h3>Teacher Arlene Gonito</h3>
-            <i class="fa-solid fa-phone-volume"></i><span>0967 680 7324</span>
-        </div>
+img {
+    height: 100px;
+    width: 100px;
+}
 
-        <div class = "teacher2">
-            <img src = "Images/Teacher2.png" alt = "Teacher Vicky's Picture">
-            <h3>Teacher Vicky Ilagan</h3>
-            <i class="fa-solid fa-phone-volume"></i><span>0923 081 7918</span>
-        </div>
+.header .flex .profile img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+}
 
-        <div class = "teacher3">
-            <img src = "Images/Teacher4.png" alt = "Teacher Vianca's Picture">
-            <h3>Teacher Vianca Silva</h3>
-            <i class="fa-solid fa-phone-volume"></i><span>0910 861 3459</span>
-        </div>
+.header .flex .profile p {
+    color: var(--light-color);
+    font-size: 1.6rem;
+    text-align: center;
+}
 
-        <div class = "teacher4">
-            <img src = "Images/Teacher3.png" alt = "Teacher Vivian's Picture">
-            <h3>Dr. Vivian Silva</h3>
-            <i class="fa-solid fa-phone-volume"></i><span>0928 163 6898</span>
-        </div>
+.side-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;
+    width: 25rem;
+    background-color: var(--white);
+    border-right: var(--border);
+    z-index: 1200;
+}
 
-        <div class = "teacher5">
-            <img src = "Images/Teacher5.png" alt = "Teacher Camille's Picture">
-            <h3>Teacher Camille Lancanan</h3>
-            <i class="fa-solid fa-phone-volume"></i><span>0929 442 1092</span>
-        </div>
+.side-bar .close-side-bar {
+    text-align: right;
+    padding: 2rem;
+    padding-bottom: 0;
+    display: none;
+}
 
-        <div class = "teacher6">
-            <img src = "Images/Teacher6.png" alt = "Teacher Princess' Picture">
-            <h3>Teacher Princess Falcunit</h3>
-            <i class="fa-solid fa-phone-volume"></i><span>0909 745 1029</span>
-        </div>
+.side-bar .close-side-bar i {
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.4rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: var(--red);
+    text-align: center;
+    border-radius: .5rem;
+}
 
-        <div class = "teacher7">
-            <img src = "Images/Teacher7.png" alt = "Teacher Marivic's Picture">
-            <h3>Teacher Marivic Gonzales</h3>
-            <i class="fa-solid fa-phone-volume"></i><span>0945 098 6523</span>
-        </div>
+.side-bar .close-side-bar i:hover {
+    background-color: var(--black);
 
-        <div class = "teacher8">
-            <img src = "Images/Teacher8.png" alt = "Teacher Emely's Picture">
-            <h3>Teacher Emely Marquez</h3>
-            <i class="fa-solid fa-phone-volume"></i><span>0912 293 3429</span>
-        </div>
-    </div>
+}
 
-    <section class = "emailform">
-        
-        <div class = "container">
-            <div class = "item">
-                <div class = "contact">
-                        <div class = "first-text">Let's Stay Connected</div>
-                        <img src = "Images/About Us.png" Alt = " Contact Us Image" class = "contactimg">
-                </div>
-                <div class="submit-form">
-                    <h4 class = "second-text">Email Us</h4>
-                    <form action = "">
-                        <div class = "input-box">
-                            <input type = "text" class = "input" required>
-                            <label for = "">First Name</label>
-                        </div>
+/*
+.side-bar .profile {
+    padding: 3rem 2rem;
+    text-align: center;
+}
 
-                        <div class = "input-box">
-                            <input type = "text" class = "input" required>
-                            <label for = "">Last Name</label>
-                        </div>
+.side-bar .profile img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+}
 
-                        <div class = "input-box">
-                            <input type = "text" class = "input" required>
-                            <label for = "">Subject</label>
-                        </div>
+.side-bar .profile span {
+    color: var(--light-color);
+    font-size: 1.6rem;   
+} */
 
-                        <div class = "input-box">
-                            <textarea name = "" class = "input" required id = "message" cols = "30" rows = "10"></textarea>
-                            <label for = "">Message</label>
-                        </div>
+.navbar {
+    margin-top: 5rem;
+}
 
-                        <input type = "submit" class = "submitbtn"  value = "Submit">
-                    </form>
-            </div>
-        </div>
-    </section>
+.side-bar .navbar a {
+    display: block;
+    padding: 2rem;
+    margin: .5rem 0;
+    font-size: 1.8rem;
+}
 
-        <!-- Footer -->
-   <footer class="footer"> 
+.side-bar .navbar a i {
+    color: var(--main-color);
+    margin-right: 1.5rem;
+    transition: .2s linear;
+ }
 
-        &copy; copyright @ 2023 by <span>Mentopedia Tutorial Services</span> | All Rights Reserved!
+.side-bar .navbar a span {
+    color: var(--light-color);
+}
 
-    </footer> 
+.side-bar .navbar a:hover {
+    background-color: var(--light-bg);
+}
 
-    <!-- JS file link -->
-    <script src="JS/script.js"></script>
+.side-bar .navbar a:hover i {
+    margin-right: 2.5rem;
+}
 
-</body>
-</html>
+.side-bar.active {
+    left: -31rem;
+}
+
+
+.banner img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 5%;
+}
+
+.LearnBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    align-items: flex-start;
+    margin: 3rem 0 4rem 0; 
+}
+
+.LearnBox .box1 {
+    width: 100%;
+    min-height: 35rem;
+    min-width: 35rem;
+    display: flex;
+    background-color: rgb(239, 184, 184);
+}
+
+.LearnBox .box1 img {
+    height: 35rem;
+    width: 51rem;
+}
+
+.LearnBox .box1 h3 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 45px;
+}
+
+.LearnBox .box1 p {
+    font-size: 16px;
+    margin: 25px 40px 0 90px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.box-container {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(27.5rem, 1fr));
+    gap: 1.3rem;
+    align-items: center;   
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+.quick-select .box-container .box {
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.quick-select .box-container .box .title {
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+}
+
+.quick-select .box-container .box .title2 {
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+}
+
+.quick-select .box-container .box p {
+    line-height: 2;
+    padding-top: 1.5rem;
+    color: var(--light-color);
+    font-size: 1.8rem;
+}
+
+.quick-select .box-container .tutor {
+    text-align: center;
+}
+
+.quick-select .box-container .tutor p { 
+    padding-bottom: 1rem;
+} 
+
+.quick-select .box-container .box .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding-top: 2rem; 
+    margin-top: 1.3rem;
+    margin-left: 10rem
+}
+    /*margin-left: 20rem;
+    margin-right: 10rem;
+
+
+.quick-select .box-container .box .flex1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding: 1.4rem;
+    margin-left: 7rem;
+    margin-right: 10rem;
+} */
+
+.quick-select .box-container .box .flex a {
+    padding: 2rem 2.5rem 2.5rem 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    background-color: transparent;
+    border: solid red;
+    align-items: center;
+}
+
+.quick-select .box-container .box .flex a i { 
+    margin-right: 1rem;
+    color: rgb(242, 166, 166);
+}
+
+.quick-select .box-container .box .flex a span { 
+    color: black;
+}
+
+.quick-select .box-container .box .flex a:hover { 
+    background-color: rgb(233, 185, 185);
+}
+
+.quick-select .box-container .box .flex a:hover i {
+    color: var(--white)
+}
+
+.quick-select .box-container .box .flex a:hover span {
+    color: var(--white);
+}
+
+.form-container{
+    min-height: calc(100vh - 20rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .form-container form{
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 2rem;
+    width: 50rem;
+ }
+ 
+ .form-container form h3{
+    display: flex;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: var(--black);
+    text-align: center;
+ }
+ 
+ .form-container form p{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    padding-top: 1rem;
+ }
+ 
+ .form-container form p span{
+    color: var(--red);
+ }
+ 
+ .form-container form .box{
+    font-size: 1.8rem;
+    color: var(--black);
+    border-radius: .5rem;
+    padding: 1.4rem;
+    background-color: var(--light-bg);
+    width: 100%;
+    margin: 1rem 0;
+ }
+
+ .form-container form .user-details {
+    display: flex;
+ }
+
+ .teachers .search-tutor{
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    background-color: var(--white);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+ }
+ 
+ .teachers .search-tutor input{
+    width: 100%;
+    background: none;
+    font-size: 1.8rem;
+    color: var(--black);
+ }
+ 
+ .teachers .search-tutor button{
+    font-size: 2rem;
+    color: var(--black);
+    cursor: pointer;
+    background:none;
+ }
+ 
+ .teachers .search-tutor button:hover{
+    color: var(--main-color);
+ }
+ 
+ .teachers .box-teacher{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2rem;
+    justify-content: center;
+ }
+ 
+ .teachers .box-teacher .box{
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 1rem;
+    width: 70rem;
+ }
+ 
+ .teachers .box-teacher .offer{
+    text-align: center;
+ }
+ 
+ .teachers .box-teacher .offer h3{
+    font-size: 2.5rem;
+    color: var(--black);
+    text-transform: capitalize;
+    padding-bottom: .5rem;
+ }
+ 
+ .teachers .box-teacher .offer p{
+    line-height: 1.7;
+    padding: .5rem 0;
+    color: var(--light-color);
+    font-size: 1.7rem;
+ }
+ 
+ .teachers .box-teacher .box .tutor{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+ }
+ 
+ .teachers .box-teacher .box .tutor img{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+ }
+ 
+ .teachers .box-teacher .box .tutor h3{
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: .2rem;
+ }
+ 
+ .teachers .box-teacher .box .tutor span{
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    color: var(--light-color);
+ }
+ 
+ .teachers .box-teacher .box p{
+    padding: .5rem 0;
+    font-size: 1.7rem;
+    color: var(--light-color);
+ }
+ 
+ .teachers .box-teacher .box p span{
+    color: var(--main-color);
+ }
+
+ .reviews .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+ }
+ 
+ .reviews .box-container .box{
+    border-radius: .5rem;
+    background-color: var(--white);
+    padding: 2rem;
+ }
+ 
+ .reviews .box-container .box p{
+    line-height: 1.7;
+    font-size: 1.7rem;
+    color: var(--light-color);
+ }
+ 
+ .reviews .box-container .box .student{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+ }
+ 
+ .reviews .box-container .box .student img{
+    height: 5rem;
+    width: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+ }
+ 
+ .reviews .box-container .box .student h3{
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: .3rem;
+ }
+ 
+ .reviews .box-container .box .student .stars{
+    font-size: 1.5rem;
+    color:var(--orange);
+ }
+
+ .contactdetails {
+    width: 100%;
+    height: 25rem;
+    background-color: rgba(253,236,150, 0.7);
+    margin-top: 3rem;
+} 
+
+.contactdetails h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+ .add-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    margin: 0 10rem 2rem 10rem;
+    gap: 2rem;
+ }
+
+ .details1 {
+    margin-top: 2.5rem;
+    padding: 3rem;
+    border: solid;
+    align-items: center;
+ }
+
+ .details1 img {
+    height: 3rem;
+    width: 3rem;
+    margin: 0 0 .5rem 16rem;
+    display: inline-block;
+ }
+
+ .details1 h3 {
+    font-size: 2rem;
+    text-align: center;
+ }
+
+ .details1 p {
+    font-size: 1.5rem;
+    padding-top: .5rem;
+    text-align: center;
+ }
+
+ .map img{
+    width: 100%;
+    height: 30rem;
+ }
+
+ .about-header {
+    position: relative;
+ }
+
+ .about-header img {
+    width: 100%;
+    height: 40rem;
+    filter: blur(4px);
+ }
+ 
+ .content {
+    position: absolute;
+    top: 25%;
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+    margin-left: 30rem;
+ }
+ 
+ .content p{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: white;
+    padding: 1rem 0;
+    margin-top: .5rem;
+ }
+ 
+ .content h2{
+    top: 25%;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: white;
+    text-transform: uppercase;
+ } 
+
+ .about-box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2.5rem;
+    align-items: flex-start;
+    margin: 0 5rem 0 15rem; 
+ }
+ 
+ .about-box-container .box{
+    border-radius: .5rem;
+    padding: 1rem; 
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+ }
+ 
+ .about-box-container .box i{
+    font-size: 3rem;
+ }
+
+ .about-box-container .box .fa-book-open-reader {
+    color: rgb(0, 106, 255);
+ }
+
+ .about-box-container .box .fa-school-lock {
+    color: rgb(249, 6, 107)
+ }
+
+ .about-box-container .box .fa-chalkboard-user {
+    color: rgb(170, 0, 255);
+ }
+ 
+ .about-box-container .box h3{
+    font-size: 2.4rem;
+    color: var(--black);
+    margin-bottom: .3rem;
+    text-align: center;
+ }
+ 
+ .about-box-container .box p{
+    font-size: 1.4rem;
+    color:var(--light-color);
+    text-align: justify;
+    line-height: 20px;
+ }
+
+ .emailform .container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+ }
+
+ .emailform .container .item {
+    width: 100%;
+    height: 550px;
+    max-width: 820px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,.4);
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    z-index: 1000;
+ }
+
+ .emailform .container .item .contact {
+    background: #fff;
+ }
+
+ .emailform .container .item .submit-form {
+    background: rgb(243, 78, 105);
+ }
+
+ .emailform .container .item .contact .first-text {
+    color: #0f52ba;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 25px;
+ }
+
+ .emailform .container .item .contact .contactimg {
+    height: 320px;
+    width: 320px;
+    margin: 35px 0 0 35px;
+ }
+
+ .second-text {
+    font-size: 25px;
+    color: #fff;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+form {
+    padding: 0 50px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.input-box {
+    height: 40px;
+    width: 90%;
+    margin: 30px 0;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 10px;
+    color: black;
+    font-size: 16px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    padding-left: 10px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    transition: .3s;
+}
+
+.input-box .input:focus ~ label,
+.input-box .input:valid ~ label {
+    top: -1px;
+    left: 10px;
+    background: rgb(243, 78, 105);
+    font-weight: 500;
+    font-size: 12px;
+    padding: 5px;
+}
+
+textarea.input {
+    resize: none;
+    min-height: 150px;
+    overflow:  auto;
+}
+
+.submitbtn {
+    position: relative;
+    top: 100px;
+    background: #fff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 35px;
+    width: 30%;
+    font-size: 16px;
+    color: rgb(243, 78, 105);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.teacher-header {
+    margin: 2rem 10rem 0 10rem;
+    align-items: center;
+}
+
+.teacher-header h2 {
+    text-align: center;
+    font-size: 30px;
+    display: block;
+    padding-bottom: 2rem;
+    margin-top: 4rem;
+}
+
+.teacherscontact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    margin: 0 10rem 0 10rem;
+}
+
+.teacherscontact img {
+    border-radius: 1rem;
+    width: 20rem;
+    height: 25rem;
+    background-color: rgba(170, 142, 186, 0.7);
+    display: block;
+    justify-content: center;
+    margin: 0 2rem 0 4rem;
+}
+
+.teacherscontact h3 {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-right: 4rem;
+    padding: .8rem;
+}
+
+.teacherscontact i {
+    text-align: center;
+    display: inline-block;
+    padding: .5rem 0 3rem 3rem;
+    font-size: 1.4rem;
+    margin-left: 4rem;
+}
+
+.teacherscontact span {
+    text-align: center;
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 2rem;
+}
+
+
+.footer {
+    position: sticky;
+    bottom: 0; right: 0; left: 0;
+    background-color: var(--white);
+    border-top: var(--border);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: var(--black);
+    font-size: 1.2rem;
+    z-index: 1000;
+}
+
+.footer span {
+    color: rgb(243, 78, 105);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width:1200px) {
+
+    body {
+        padding-left: 0;
+    }
+
+    .side-bar {
+        transition: .2s linear;
+        left: -30rem;
+    }
+
+    .side-bar.active {
+        left: 0;
+        box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
+    }
+
+    .side-bar .close-side-bar {
+        display: block;
+    }
+}
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px) {
+    .header .flex {
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        width: auto;
+        border-top: var(--border);
+        border-bottom:  var(--border);
+        background-color: var(--white);
+    }
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    heading {
+        font-size: 2rem;
+    }
+
+    .flex-btn {
+        flex-flow: column;
+        gap: 0;
+    }
+}
