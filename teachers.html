@@ -1,81 +1,315 @@
 <!DOCTYPE html>
-<html lang = "en">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teachers</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>teachers</title>
 
-    <!-- font awasome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
-    <!-- css file link -->
-    <link rel="stylesheet" href="CSS/style.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
 </head>
-
 <body>
 
-    <!-- Header Section -->
-    <header class = "header">
+   <header class = "header">
 
-        <section class = "flex">
+      <div class = "flex">
 
-            <a href = "home.html" class = "logo">
-                <img src = "Images/Mentopedia-logo.jpg" alt="Mentopedia Logo" class ="mentopedia-logo"> 
-                Mentopedia </a>
+         <a href = "home.html" class = "logo">
+             <span style = "color:red">M</span>
+             <span style = "color:rgb(251, 206, 26)">E</span>
+             <span style = "color:rgb(244, 177, 7)">N</span>
+             <span style = "color:rgb(31, 144, 31)">T</span>
+             <span style = "color:rgb(123, 4, 170)">O</span>
+             <span style = "color:rgb(6, 118, 230)">P</span>
+             <span style = "color:red">E</span>
+             <span style = "color:rgb(251, 206, 26)">D</span>
+             <span style = "color:rgb(244, 177, 7)">I</span>
+             <span style = "color:rgb(31, 144, 31)">A</span></a>
 
-            <div class = "icons">
-                <div id = "menu-btn" class = "fas fa-bars"></div>
-                <div id = "user-btn" class = "fas fa-user"></div>
-                <div id = "toggle-btn" class = "fa-sharp fa-solid fa-moon"></div>
-            </div>
+         <div class = "icons">
+             <div id = "menu-btn" class = "fas fa-bars"></div>
+             <div id = "user-btn" class = "fas fa-user"></div>
+             <div id = "toggle-btn" class = "fa-sharp fa-solid fa-moon"></div>
+         </div>
 
-            <div class = "profile">
-                <img src = "Images/student1.jpg" alt="Student Image">
-                <p>Student</p>
-                <a href = "profile.html" class = "btn">View Profile</a>
-                <div class = "flex-btn">
-                    <a href = "login.html" class = "option-btn">Log Out</a>
-                    <!--<a href = "register.html" class = "option-btn">Logout</a>-->
-                </div>
-            </div>
 
-        </section>
-    </header>
+         <div class = "profile">
+             <img src = "Images/student1.jpg" alt="Student Image">
+             <p>Student</p>
+             <a href = "profile.html" class = "btn">View Profile</a>
+             <div class = "flex-btn">
+                 <a href = "login.html" class = "option-btn">Log Out</a>
+                 <!--<a href = "register.html" class = "option-btn">Logout</a>-->
+             </div>
+         </div>
 
-    <!-- Side Bar Section -->
-    <div class = "side-bar">
+     </div>
+ </header>
 
-        <div class = "close-side-bar">
-            <i class = "fas fa-times"></i> 
-        </div>
+<!-- Side Bar Section -->
+<div class = "side-bar">
 
-        <div class = "profile">
-            <img src = "Images/student1.jpg" alt="Student Image">
-            <p>Student</p>
-            <a href = "profile.html" class = "btn">View Profile</a>
-        </div>
-
-        <nav class="navbar">
-            <a href = "home.html"><i class = "fas fa-home"></i><span>Home</span></a>
-            <a href = "about.html"><i class="fa-solid fa-circle-info"></i><span>About Us</span></a>
-            <a href = "students.html"><i class="fa-solid fa-book-open-reader"></i><span>Students</span></a>
-            <a href = "teachers.html"><i class="fas fa-chalkboard-teacher"></i><span>Teachers</span></a>
-            <a href = "forum.html"><i class="fa fa-bullhorn"></i><span>Forum</span></a> 
-        </nav>
-
+    <div class = "close-side-bar">
+        <i class = "fas fa-times"></i> 
     </div>
 
-    <!-- Footer -->
-   <footer class="footer"> 
 
-        &copy; copyright @ 2023 by <span>Mentopedia Tutorial Services</span> | All Rights Reserved!
+    <nav class="navbar">
+        <a href = "home.html"><i class = "fas fa-home"></i><span>Home</span></a>
+        <a href = "about.html"><i class="fa-solid fa-circle-info"></i><span>About Us</span></a>
+        <a href = "students.html"><i class="fa-solid fa-book-open-reader"></i><span>Students</span></a>
+        <a href = "teachers.html"><i class="fas fa-chalkboard-teacher"></i><span>Teachers</span></a>
+        <a href = "forum.html"><i class="fa fa-bullhorn"></i><span>Forum</span></a> 
+    </nav>
 
-    </footer> 
+</div>
 
-    <!-- JS file link -->
-    <script src="JS/script.js"></script>
+<section class="teachers">
 
+   <h1 class="heading"> Expert Teachers</h1>
+
+   <form action="" method="post" class="search-tutor">
+      <input type="text" name="search_box" placeholder="search tutors..." required maxlength="100">
+      <button type="submit" class="fas fa-search" name="search_tutor"></button>
+   </form>
+
+   <div class="box-teacher">
+
+      <div class="box">
+         <div class="tutor">
+            <img src = "Images/Teacher1.png" alt = "Teacher Arlene's Picture">
+            <div>
+               <h3>Arlene Gonito</h3>
+               <span>Elementary Teacher</span><br>
+               <span>Tutor</span>
+            </div>
+         </div>
+       
+         <a href="teacher_profile.html" class="inline-btn">view profile</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src = "Images/Teacher2.png" alt = "Teacher Vicky's Picture">
+            <div>
+               <h3>Vicky Ilagan</h3>
+               <span>Elementary Teacher</span><br>
+               <span>Tutor</span>
+            </div>
+         </div>
+       
+         <a href="teacher_profile.html" class="inline-btn">view profile</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src = "Images/Teacher4.png" alt = "Teacher Vianca's Picture">
+            <div>
+               <h3>Vianca Silva</h3>
+               <span>Elementary Teacher</span><br>
+               <span>Tutor</span>
+            </div>
+         </div>
+      
+         <a href="teacher_profile.html" class="inline-btn">view profile</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src = "Images/Teacher3.png" alt = "Teacher Vivian's Picture">
+            <div>
+               <h3>Dr. Vivian Silva</h3>
+               <span>Elementary Teacher</span><br>
+               <span>Tutor</span>
+            </div>
+         </div>
+
+         <a href="teacher_profile.html" class="inline-btn">view profile</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src = "Images/Teacher5.png" alt = "Teacher Camille's Picture">
+            <div>
+               <h3>Camille Lancanan</h3>
+               <span>Elementary Teacher</span><br>
+               <span>Tutor</span>
+            </div>
+         </div>
+      
+         <a href="teacher_profile.html" class="inline-btn">view profile</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src = "Images/Teacher6.png" alt = "Teacher Princess' Picture">
+            <div>
+               <h3>Princess Falcunit</h3>
+               <span>Elementary Teacher</span> <br>
+               <span>Tutor</span>
+            </div>
+         </div>
+       
+         <a href="teacher_profile.html" class="inline-btn">view profile</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src = "Images/Teacher7.png" alt = "Teacher Marivic's Picture">
+            <div>
+               <h3>Marivic Gonzales</h3>
+               <span>Elementary Teacher</span> <br>
+               <span>Tutor</span>
+            </div>
+         </div>
+       
+         <a href="teacher_profile.html" class="inline-btn">view profile</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src = "Images/Teacher8.png" alt = "Teacher Emely's Picture">
+            <div>
+               <h3>Emely Marquez</h3>
+               <span>Elementary Teacher</span> <br>
+               <span>Tutor</span>
+            </div>
+         </div>
+       
+         <a href="teacher_profile.html" class="inline-btn">view profile</a>
+      </div>
+
+   </div>
+
+</section>
+
+<section class="reviews">
+
+   <h1 class="heading">Teacher's Reviews</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, suscipit a. Quibusdam, dignissimos consectetur. Sed ullam iusto eveniet qui aut quibusdam vero voluptate libero facilis fuga. Eligendi eaque molestiae modi?</p>
+         <div class="student">
+            <img src="images/pic-2.jpg" alt="">
+            <div>
+               <h3> </h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, suscipit a. Quibusdam, dignissimos consectetur. Sed ullam iusto eveniet qui aut quibusdam vero voluptate libero facilis fuga. Eligendi eaque molestiae modi?</p>
+         <div class="student">
+            <img src="images/pic-3.jpg" alt="">
+            <div>
+               <h3> </h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, suscipit a. Quibusdam, dignissimos consectetur. Sed ullam iusto eveniet qui aut quibusdam vero voluptate libero facilis fuga. Eligendi eaque molestiae modi?</p>
+         <div class="student">
+            <img src="images/pic-4.jpg" alt="">
+            <div>
+               <h3> </h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, suscipit a. Quibusdam, dignissimos consectetur. Sed ullam iusto eveniet qui aut quibusdam vero voluptate libero facilis fuga. Eligendi eaque molestiae modi?</p>
+         <div class="student">
+            <img src="images/pic-5.jpg" alt="">
+            <div>
+               <h3> </h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, suscipit a. Quibusdam, dignissimos consectetur. Sed ullam iusto eveniet qui aut quibusdam vero voluptate libero facilis fuga. Eligendi eaque molestiae modi?</p>
+         <div class="student">
+            <img src="images/pic-6.jpg" alt="">
+            <div>
+               <h3> </h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, suscipit a. Quibusdam, dignissimos consectetur. Sed ullam iusto eveniet qui aut quibusdam vero voluptate libero facilis fuga. Eligendi eaque molestiae modi?</p>
+         <div class="student">
+            <img src="images/pic-7.jpg" alt="">
+            <div>
+               <h3> </h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+</section>
+    
+<!-- Footer -->
+<footer class="footer"> 
+
+    &copy; copyright @ 2023 by <span>Mentopedia Tutorial Services</span> | All Rights Reserved!
+
+</footer> 
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+   
 </body>
 </html>
