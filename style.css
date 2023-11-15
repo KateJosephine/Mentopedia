@@ -10,6 +10,7 @@
    --black:#2c3e50;
    --white:#fff;
    --border:.1rem solid rgba(0,0,0,.2);
+   --dark: #000000;
 }
 
 * {
@@ -55,6 +56,7 @@ body.dark {
     --black:#fff;
     --white:#222;
     --border:.1rem solid rgba(255,255,255,.2);
+    --dark: #fff;
 }
 
 body.active {
@@ -131,7 +133,7 @@ section {
 .inline-option-btn:hover,
 .inline-delete-btn:hover {
     background-color: rgb(233, 185, 185);
-    color: black;
+    color: #000000;
 }
 
 .flex-btn {
@@ -372,13 +374,13 @@ img {
 
 .quick-select .box-container .box .title {
     font-size: 3rem;
-    color: black;
+    color: var(--dark);
     text-align: center;
 }
 
 .quick-select .box-container .box .title2 {
     font-size: 2rem;
-    color: black;
+    color: var(--dark);
     text-align: center;
 }
 
@@ -422,7 +424,7 @@ img {
 }
 
 .quick-select .box-container .box .flex a span { 
-    color: black;
+    color: var(--dark);
 }
 
 .quick-select .box-container .box .flex a:hover { 
@@ -847,7 +849,7 @@ form {
     border-radius: 20px;
     outline: none;
     padding-left: 10px;
-    color: black;
+    color: var(--dark);
     font-size: 16px;
 }
 
@@ -905,6 +907,7 @@ textarea.input {
     display: block;
     padding-bottom: 2rem;
     margin-top: 4rem;
+    color: var(--dark);
 }
 
 .teacherscontact {
@@ -928,6 +931,7 @@ textarea.input {
     text-align: center;
     margin-right: 4rem;
     padding: .8rem;
+    color: var(--dark);
 }
 
 .teacherscontact i {
@@ -936,6 +940,7 @@ textarea.input {
     padding: .5rem 0 3rem 3rem;
     font-size: 1.4rem;
     margin-left: 4rem;
+    color:var(--main-color);
 }
 
 .teacherscontact span {
@@ -944,6 +949,7 @@ textarea.input {
     display: inline-block;
     font-size: 14px;
     margin-bottom: 2rem;
+    color: var(--dark);
 }
 
 
