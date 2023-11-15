@@ -17,53 +17,54 @@
 
 <header class="header">
 
-    <section class = "flex">
+   <div class = "flex">
 
-        <a href = "home.html" class = "logo">
-            <img src = "Images/Mentopedia-logo.jpg" alt="Mentopedia Logo" class ="mentopedia-logo"> 
-            Mentopedia </a>
+      <a href = "home.html" class = "logo">
+          <span style = "color:red">M</span>
+          <span style = "color:rgb(251, 206, 26)">E</span>
+          <span style = "color:rgb(244, 177, 7)">N</span>
+          <span style = "color:rgb(31, 144, 31)">T</span>
+          <span style = "color:rgb(123, 4, 170)">O</span>
+          <span style = "color:rgb(6, 118, 230)">P</span>
+          <span style = "color:red">E</span>
+          <span style = "color:rgb(251, 206, 26)">D</span>
+          <span style = "color:rgb(244, 177, 7)">I</span>
+          <span style = "color:rgb(31, 144, 31)">A</span></a>
 
-      <div class="icons">
-         <div id="menu-btn" class="fas fa-bars"></div>
-         <div id="search-btn" class="fas fa-search"></div>
-         <div id="user-btn" class="fas fa-user"></div>
-         <div id="toggle-btn" class="fas fa-sun"></div>
+      <div class = "icons">
+          <div id = "menu-btn" class = "fas fa-bars"></div>
+          <div id = "user-btn" class = "fas fa-user"></div>
+          <div id = "toggle-btn" class = "fa-sharp fa-solid fa-moon"></div>
       </div>
 
-      <div class="profile">
-         <img src="images/pic-1.jpg" class="image" alt="">
-         <h3 class="name">Renz Benson</h3>
-         <p class="role">student</p>
-         <a href="profile.html" class="btn">view profile</a>
-         <div class="flex-btn">
-            <a href="login.html" class="option-btn">login</a>
-            <a href="register.html" class="option-btn">register</a>
-         </div>
+
+      <div class = "profile">
+          <img src = "Images/student1.jpg" alt="Student Image">
+          <p>Student</p>
+          <a href = "profile.html" class = "btn">View Profile</a>
+          <div class = "flex-btn">
+              <a href = "login.html" class = "option-btn">Log Out</a>
+              <!--<a href = "register.html" class = "option-btn">Logout</a>-->
+          </div>
       </div>
 
-   </section>
+  </div>
+</header>
 
-</header>   
+<!-- Side Bar Section -->
+<div class = "side-bar">
 
-<div class="side-bar">
+    <div class = "close-side-bar">
+        <i class = "fas fa-times"></i> 
+    </div>
 
-   <div id="close-btn">
-      <i class="fas fa-times"></i>
-   </div>
-
-   <div class = "profile">
-    <img src = "Images/student1.jpg" alt="Student Image">
-    <p>Student</p>
-    <a href = "profile.html" class = "btn">View Profile</a>
-</div>
-
-   <nav class="navbar">
-      <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
-      <a href="about.html"><i class="fas fa-question"></i><span>about</span></a>
-      <a href="students.html"><i class="fas fa-graduation-cap"></i><span>students</span></a>
-      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
-      <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
-   </nav>
+    <nav class="navbar">
+        <a href = "home.html"><i class = "fas fa-home"></i><span>Home</span></a>
+        <a href = "about.html"><i class="fa-solid fa-circle-info"></i><span>About Us</span></a>
+        <a href = "students.html"><i class="fa-solid fa-book-open-reader"></i><span>Students</span></a>
+        <a href = "teachers.html"><i class="fas fa-chalkboard-teacher"></i><span>Teachers</span></a>
+        <a href = "forum.html"><i class="fa fa-bullhorn"></i><span>Forum</span></a> 
+    </nav>
 
 </div>
 
@@ -72,12 +73,27 @@
    <form action="" method="post" enctype="multipart/form-data">
       <h3>register now</h3>
       <p>Student's Name  <span>*</span></p>
-      <input type="text" name="name" placeholder="Student's Name" required maxlength="50" class="box">
+      <input type="text" name="name" placeholder="Last Name" required maxlength="50" class="box">
+      <input type="text" name="name" placeholder="First Name" required maxlength="50" class="box">
+      <input type="text" name="name" placeholder="Middle Initial" required maxlength="50" class="box">
+      </div>
 
-      <p>Parent / Guardian Name <span>*</span></p>
-      <input type="text" name="name" placeholder="Parent / Guardian Name" required maxlength="50" class="box">
+      <p>Name of Guardian <span>*</span></p>
+      <input type="text" name="name" placeholder="Last Name" required maxlength="50" class="box">
+      <input type="text" name="name" placeholder="First Name" required maxlength="50" class="box">
+      <input type="text" name="name" placeholder="Middle Initial" required maxlength="50" class="box">
 
-      <p>Contact Number <span>*</span></p>
+      <p>Relationship with Guardian <span>*</span></p>
+      <select id="cars" name="cars">
+      <option value="Mother">Mother</option>
+      <option value="Father">Father</option>
+      <option value="Sibling">Sibling</option>
+      <option value="Aunt / Uncle">Aunt / Uncle</option>
+      <option value="Grandparent">Grandparent</option>
+      
+      </select>
+
+      <p>Contact Number of Guardian <span>*</span></p>
       <input type="number" name="name" placeholder="Contact Number" required maxlength="50" class="box">
 
       <p>Starting Date <span>*</span></p>
@@ -96,22 +112,12 @@
 
 
 
+<!-- Footer -->
+<footer class="footer"> 
 
+   &copy; copyright @ 2023 by <span>Mentopedia Tutorial Services</span> | All Rights Reserved!
 
-
-
-
-
-
-
-
-
-
-<footer class="footer">
-
-   &copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!
-
-</footer>
+</footer> 
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
